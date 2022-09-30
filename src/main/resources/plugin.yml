@@ -1,0 +1,51 @@
+name: Pythoncombat
+version: '${project.version}'
+main: me.pythontest.pythoncombat.pythoncombat.Pythoncombat
+api-version: 1.18
+authors: [ pythontest ]
+softdepend: [WorldGuard,WorldEdit]
+description: Easy pvp manager for your server
+commands:
+  pcinfo:
+    description: command to provide info about plugin author
+    usage: /pcinfo
+    permission: pythoncombat.plugininfo
+    permission-message: Powinnieneś mieć dostęp do tego polecenia jeżeli go nie masz to znaczy że administrator ukrywa pochodzenie tego pluginu. Pythontest pozdrawia.
+  pvp:
+    description: Pozwala zmieniać ustawienia pvp
+    usage: /pvp [allow|deny]
+    permission: pythoncombat.pvp
+  duel:
+    description: pozwala tworzyć duele
+    usage: /duel [invite|accept|deny|remove] <username>
+    permission: pythoncombat.duel
+  combatmanager:
+    description: Allows you to edit pythoncombat settings
+    usage: /combatmanager
+    permission: pythoncombat.combatmanager
+  notificationsettings:
+    description: Pozwala zmieniać ustawienia powiadomień z pluginu pythoncombat
+    usage: /notificationsettings <notificationkey> [allow|deny]
+    permission: pythoncombat.notificationmanage
+permissions:
+  pythoncombat.plugininfo:
+    description: Nie powinneneś zabierać użytkownikom dostępu do tego polecenia
+    default: true
+  pythoncombat.pvp:
+    default: true
+    description: Pozwala zmieniać domyśle ustawienia zezwalania na pvp
+  pythoncombat.duel:
+    default: true
+    description: Pozwala tworzyć duele
+  pythoncombat.forcepvp.deny:
+    default: false
+    description: Umożliwia wymuszanie zablokowanego ustawienia pvp u użytkownika
+  pythoncombat.forcepvp.allow:
+    default: false
+    description: Umożliwia wymuszanie odblokowanego ustawienia pvp u użytkownika
+  pythoncombat.combatmanager:
+    default: op
+    description: Gives access to /combatmanager command(Allows manage plugin)
+  pythoncombat.notificationmanage:
+    default: true
+    description: Pozwala zmieniać ustawienia powiadomień
