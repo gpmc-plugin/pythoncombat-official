@@ -26,7 +26,7 @@ public class ChatMessages {
         return message;
     }
     public static Component PCinfo(){
-        Component message = Component.text("Autorem pluginu pythoncombat 1.2.1(rewolucja naolityczna relase) jest pythontest\n");
+        Component message = Component.text("Autorem pluginu pythoncombat 1.2.2(rewolucja naolityczna relase) jest pythontest\n");
         Component line2 = Component.text("Projekt jest udostępniany na licencji GPL-3.0\n");
         Component line3 = Component.text("Kod można znaleźć ").append(Component.text("tutaj", NamedTextColor.WHITE,TextDecoration.UNDERLINED).clickEvent(ClickEvent.openUrl("https://github.com/gpmc-plugin/pythoncombat-official"))).append(Component.text(". A prywatne gh autora ")).append(Component.text("tutaj",NamedTextColor.WHITE,TextDecoration.UNDERLINED).clickEvent(ClickEvent.openUrl("https://github.com/mikimasn")));
         Component line4 = Component.text("\nPlugin wykorzystuje różne inne projekty opensource oto one: \n");
