@@ -3,6 +3,7 @@ package me.pythontest.pythoncombat.managers;
 import me.pythontest.pythoncombat.objects.PCGroup;
 import me.pythontest.pythoncombat.pythoncombat.Pythoncombat;
 
+import java.nio.file.Paths;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +21,7 @@ public class DatabaseManager {
     public void connect() {
         if(!this.plugin.getDataFolder().exists())
             plugin.getDataFolder().mkdir();
-        String dbPath = this.plugin.getDataFolder().getAbsolutePath()+"\\db.db";
+        String dbPath = Paths.get(this.plugin.getDataFolder().getAbsolutePath().toString(),"db.db").toString();
         String connString = "jdbc:sqlite:"+dbPath;
         try{
             conn = DriverManager.getConnection(connString);
